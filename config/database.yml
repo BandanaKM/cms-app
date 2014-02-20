@@ -11,7 +11,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: simple_cms_three_development
+  database: simple_cms_development
   pool: 5
   username: simple_cms
   password: flatiron
@@ -23,7 +23,7 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: simple_cms_three_test
+  database: simple_cms_test
   pool: 5
   username: root
   password:
@@ -32,7 +32,7 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: simple_cms_three_production
+  database: simple_cms_production
   pool: 5
   username: root
   password:
