@@ -1,0 +1,44 @@
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<!-- 
+this takes us back to our index action. looking for all subjects, not one particular subject. 
+
+each of the attributes for the subject, listed with a label and a value 
+
+notice that because I don't have an array of objects, instance 
+
+working with a local loop variable called subject
+
+
+
+ -->
+
+<div class="subjects show">
+<h2>Show Subjects</h2>
+
+<table summary="Subject detail view">
+	  <tr>
+		<th>Name</th>
+		<td><%= @subject.name %></td>
+	</tr>
+		<tr>
+		<th>Position</th>
+		<td><%= @subject.position %></td>
+	</tr>
+		<tr>
+		<th>Visible?</th>
+		<td><%= @subject.visible ? 'true' : 'false' %></td>
+	</tr>
+		<tr>
+		<th>Created</th>
+		<td><%= @subject.created_at %></td>
+		</tr>
+		<tr>
+		<th>Updates</th>
+		<td><%= @subject.updated_at %></td>
+	</tr>
+	</table>
+
+	</div>
+
