@@ -1,8 +1,9 @@
+<% @page_title = "Pages" %>
 
 
 <!-- if the flash notice is not blank, then display the flash notice
  -->
-<div class="subjects index">
+<div class="pages index">
 <h2>Pages</h2>
 
 <%= link_to("Add New Page", {:action => 'new'}, :class => 'action new') %>
@@ -24,7 +25,7 @@
 		<td><%= page.name %></td>
 		<td><%= page.permalink %></td>
 		<td class="center"><%= page.visible ? 'Yes' : 'No' %></td>
-		<td class="center"><%= page.sections.size %></td>
+		
 		<td class="actions">
 			<%= link_to("Show", {:action => 'show', :id => page.id}, :class => 'action show') %>
 			<%= link_to("Edit", {:action => 'edit', :id => page.id}, :class => 'action edit') %>

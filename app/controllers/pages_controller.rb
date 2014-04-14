@@ -23,7 +23,6 @@ layout 'admin'
      flash[:notice] = "Page created successfully."
       redirect_to(:action => 'index')
     else 
-    else 
       render('new')
     end 
   end 

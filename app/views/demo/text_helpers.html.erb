@@ -1,0 +1,64 @@
+<%
+text = "This is some long sample text. It includes line breaks\n and double-line breaks.\n\n It rambles on and on and on.\n\n Until we get to this last line."
+%>
+
+<!-- \n is a line break or character return, \n\n is a new paragraph
+ -->
+
+<h2>word_wrap</h2>
+<%= word_wrap(text, :line_width => 30) %>
+<hr />
+
+<!-- will wrap the text to the line with provided. every time the line gets to 30 ch, helper will add a /n to it
+ -->
+
+<h2>simple_format</h2>
+<%= simple_format(text) %>
+<hr />
+
+<h2>simple_format + word_wrap</h2>
+<%= simple_format(word_wrap(text, :line_width => 30)) %>
+<hr />
+
+<h2>truncate</h2>
+<%= truncate(text, :length => 40, :omission => "...") %>
+<hr />
+
+<!-- truncates the text based on the link provided. at the end, truncate will provide an omission string  --> 
+
+<h2>excerpt</h2>
+<%= excerpt(text, 'includes', :radius => 7, :omission => "...") %>
+<hr />
+
+<!-- will ook for a work, snip out 7 characters before according to radius
+ -->
+
+<h2>highlight</h2>
+<%= highlight(text, 'sample text') %>
+<hr />
+<%= highlight(text, ['sample', 'rambles'],
+:highlighter => '<em>\1</em>') %>
+<hr />
+
+<!-- can help you highlight and design text
+ -->
+<h2>pluralize</h2>
+<%= "student".pluralize %><br />
+<%= "ox".pluralize %><br />
+<br />
+<%= pluralize(2, 'product') %><br />
+<br />
+<% [0, 1, 20].each do |n| %>
+  <%= pluralize(n, 'product') %><br />
+  <%= pluralize(n, 'octopus') %><br />
+  <%= pluralize(n, 'snipe', 'snope') %><br />
+<% end %>
+<hr />
+
+<!-- can help you pluralize. different ways to do this. first all plural, second based on a count. 
+ -->
+
+<h2>cycle</h2>
+<% 5.times do %>
+  <%= cycle('red', 'green', 'blue') %><br />
+<% end %>

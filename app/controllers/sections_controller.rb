@@ -2,7 +2,6 @@ class SectionsController < ApplicationController
  
   layout 'admin' 
 
-
   def index
       @sections = Section.all
   end
@@ -16,12 +15,11 @@ class SectionsController < ApplicationController
   end
 
   def create
-    @section = Section.new(page_params)
+    @section = Section.new(section_params)
     if @section.save 
      flash[:notice] = "Section created successfully."
       redirect_to(:action => 'index')
-    else 
-    else 
+    else  
       render('new')
     end 
   end 

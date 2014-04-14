@@ -8,7 +8,7 @@
 <!-- we want this form to submit to update, send the id as a local instance variable 
  -->
 
-<table summary="Subject form fields">
+<table summary="Section form fields">
 <tr>
 	<th>Section ID</th>
 	<td><%= f.text_field(:section_id) %></td>
@@ -33,10 +33,7 @@
 	<th>Content</th>
 	<td><%= f.text_field(:content) %></td>
 	</tr>
-
-	<div class="form-buttons">
-		<%= submit_tag("Update Subject") %>
-		</div>
+</table>
 
 	<% end %>
 </div>
