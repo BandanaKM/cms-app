@@ -4,9 +4,11 @@
 red:          #993120
 green:        #94B26F
 light green:  #B6D491
-yellow:       #F2DC87
+yellow:       #F2DC87   
+light blue		#66FFCC
 dark brown:   #332318
 light brown:  #4C2516
+dark purple:  #6600CC
 */
 
 html { height: 100%; width: 100%; }
@@ -26,14 +28,14 @@ a:hover {}
 
 /* Structure */
 #header { height: 4em; padding-top: 1em; text-align: center; 
-  background: #993120; color: #FFFFFF; }
+  background: #6600CC; color: #FFFFFF; }
 #header h1 { margin: 0; padding: 0; }
-#main { min-height: 500px; background: #F2DC87; }
+#main { min-height: 500px; background: #66FFCC; }
 #navigation { float: left; width: 180px; min-height: 480px; padding: 10px; 
-  background: #94B26F; color: #4C2516; }
+  background: #94B26F; color: #6600CC; }
 #content { padding: 10px; }
 #footer { clear: both; height: 2.5em; text-align: right;
-  background: #4C2516; color: #F2DC87; }
+  background: #6600CC; color: #66FFCC; }
 #footer p { margin: 0; padding: 0.5em 1em; }
 
 /* Navigation */
@@ -41,7 +43,7 @@ a:hover {}
 #navigation ul li { margin-bottom: 0.5em; }
 #navigation ul ul { margin: 0.5em 0 0 1em; font-size: 0.9em; }
 #navigation a { text-decoration: none; padding: 1px 3px;}
-#navigation a:hover { background: #F2DC87; }
+#navigation a:hover { background: #66FFCC; }
 
 /* Content */
-#content h2 { color: #4C2516; }
+#content h2 { color: #6600CC; }
